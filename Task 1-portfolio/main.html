@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="8-bit-pixel-lion-animal-game-assets-cross-stitch-patterns-vector-illustrations_614713-654.avif" type="image/icon type">
+    <title>Main Page</title>
+    <style>
+        /* (Existing styles) */
+        .main-page {
+            display: none; 
+        }
+
+        .computer-frame {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .header {
+            filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="pixelate"><feFlood result="flood" x="0" y="0" width="100%" height="100%" flood-color="black" /><feTile in="flood" result="tile" /><feDisplacementMap in="tile" in2="flood" xChannelSelector="r" yChannelSelector="g" scale="3" /></filter></svg>#pixelate');
+            font-weight: 300;
+            font-size: larger;
+            padding: 20px;
+            animation: glitch 0.7s infinite alternate;
+            margin-top: 900px; 
+        }
+
+        .about-me {
+            padding: 20px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid #fff;
+            border-radius: 10px;
+        }
+        .section {
+            padding: 20px;
+        }
+
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+            text-align: left; /* Left-align skills list */
+            display: inline-block; /* Center-align the skills list */
+        }
+
+        .skills-list li {
+            margin-bottom: 10px;
+        }
+
+        .loading-animation {
+            font-size: 16px;
+            margin-top: 20px;
+            animation: blink 1s infinite;
+        }
+
+        /* Glitch Animation */
+        @keyframes glitch {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(3px, 3px);
+            }
+        }
+
+        /* Blink Animation for Loading Text */
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
+        body {
+            image-rendering: pixelated;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .main-page {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .computer-frame {
+            background: url('path/to/retro-computer-frame.png') center center/cover no-repeat;
+            height: 80vh;
+            width: 80vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: auto;
+        }
+
+        .header,
+        .section {
+            padding: 2vw;
+        }
+
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .skills-list li {
+            margin-bottom: 1vw;
+        }
+        .proficiency-bar {
+            display: flex;
+            filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="pixelate"><feFlood result="flood" x="0" y="0" width="100%" height="100%" flood-color="black" /><feTile in="flood" result="tile" /><feDisplacementMap in="tile" in2="flood" xChannelSelector="r" yChannelSelector="g" scale="5" /></filter></svg>#pixelate');
+
+        }
+
+        
+
+        /* Set proficiency level for each skill */
+        .java .proficiency-block:nth-child(-n+7),
+        .problem-solving .proficiency-block:nth-child(-n+8),
+        .css .proficiency-block:nth-child(-n+6),
+        .html .proficiency-block:nth-child(-n+8),
+        .javascript .proficiency-block:nth-child(-n+7),
+        .c .proficiency-block:nth-child(-n+7),
+        .competitive-programming .proficiency-block:nth-child(-n+7) {
+            background-color: #00ff00; /* Change color as needed */
+        }
+        .resume-section {
+            margin-top: 5vw;
+        }
+        .proficiency-block {
+            width: 20px;
+            height: 20px;
+            background-color: #ffcc00;
+            margin-right: 5px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to the blocks */
+
+            
+        }
+        
+
+        .social-icons {
+            position: fixed;
+            bottom: 2vh;
+            right: 2vw;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #00ff00;
+            font-size: 2vw;
+            margin-bottom: 1vw;
+        }
+        .footer{
+            margin-top: 20px;
+            font-size: 14px;
+            border: 2px solid #888; /* Gray border */
+            padding: 10px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Main Page -->
+    <div class="main-page">
+
+        <!-- Retro Computer Frame Container -->
+        <div class="computer-frame">
+
+            <!-- Header Section -->
+            <div class="header">
+                <h1><b>Bhargava Simha</b></h1>
+                <p>Information Science Engineering Student</p>
+            </div>
+
+            <div class="about-me">
+                <h3><u>About Me</u></h3>
+                <p><br/>Welcome to my 8-bit world! <br/><br/>I am <b><i>Bhargava Simha</i></b>, a passionate Information Science Engineering student.<br/><br/> I love crafting clean and efficient code. <br/><br/>I'm deeply interested in Algorithms and innovative problem-solving using Data Structures. <br/><br/> All the code we write is but eons of Human evolution put down on paper.</p>
+            </div>
+
+            <!-- Projects Section -->
+            <div class="section">
+                <h3><u>Projects</u></h3>
+                <a href="projects.html">Explore Projects</a>
+            </div>
+
+            <!-- Interests Section -->
+            <div class="section">
+                <h3><u>Interests</u></h3>
+                <a href="interests.html">Explore Interests</a>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="section">
+                <h3><u>Skills</u></h3>
+                <ul class="skills-list">
+                    <li class="java">
+                        <span class="skill-name">Java</span>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                        </div>
+                    </li>
+                    <li class="problem-solving">
+                        <span class="skill-name">Problem Solving</span>
+                        <div class="proficiency-bar">
+                            <!-- Repeat for other skills -->
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                        </div>
+                    </li>
+                    <li class="competitive-programming">
+                        <span class="skill-name">Algorithms And Data Structures</span>
+                        <div class="proficiency-bar">
+                            <!-- Repeat for other skills -->
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                        </div>
+                    </li>
+                    <li class="css">
+                        <span class="skill-name">CSS</span>
+                        <div class="proficiency-bar">
+                            <!-- Repeat for other skills -->
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                        </div>
+                    </li>
+                    <li class="html">
+                        <span class="skill-name">HTML</span>
+                        <div class="proficiency-bar">
+                            <!-- Repeat for other skills -->
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                        </div>
+                    </li>
+                    <li class="javascript">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="proficiency-bar">
+                            <!-- Repeat for other skills -->
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                        </div>
+                    </li>
+                    <li class="c">
+                        <span class="skill-name">C</span>
+                        <div class="proficiency-bar">
+                            <!-- Repeat for other skills -->
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                            <div class="proficiency-block"></div>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <!-- Resume Section -->
+            <div class="section resume-section">
+                $ Press <a href="path/to/your/resume.pdf" download="Bhargava_Simha_Resume" class="resume-button">here</a> to download my resume.
+            </div>
+            <div class="footer">
+                <br/><br/><br/>
+                &copy; 2023 Bhargava Simha | Email: bnsimha7@gmail.com
+            </div>
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="https://github.com/bnsimha" target="_blank"><img src="GitHub.png" alt="GitHub" width="40px"height="40px"></a>
+                <a href="https://instagram.com/bsn.256?igshid=NGVhN2U2NjQ0Yg==" target="_blank"><img src="instagram.png" alt="Instagram" width="40px"height="40px"></a>
+                <a href="https://www.linkedin.com/in/bhargava-simha-a8bb5a1a5/" target="_blank"><img src="LinkedIn.png" alt="LinkedIn" width="40px"height="40px"></a>
+                <a href="mailto:bnsimha7@gmail.com" target="_blank"><img src="Mail.png" alt="Mail" width="40px"height="40px"></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

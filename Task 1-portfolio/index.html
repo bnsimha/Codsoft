@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="loadingicon.jpeg" type="image/icon type">
+    <title>Loading...</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .loading-page {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .command-prompt {
+            border: 2px solid #00ff00;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .command-line {
+            color: #00ff00;
+            font-size: 16px;
+            white-space: pre-wrap;
+            filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="pixelate"><feFlood result="flood" x="0" y="0" width="100%" height="100%" flood-color="black" /><feTile in="flood" result="tile" /><feDisplacementMap in="tile" in2="flood" xChannelSelector="r" yChannelSelector="g" scale="3" /></filter></svg>#pixelate');
+
+        }
+
+        .blinking-underscore {
+            animation: blink 1s infinite;
+            display: inline-block;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Loading Page -->
+    <div class="loading-page">
+        <div class="command-prompt">
+            <div class="command-line">
+               <center> Welcome to the Portfolio of <h1>Bhargava Simha</h1> <h1>भार्गव सिंहः ಭಾರ್ಗವ ಸಿಂಹ</h1></center>
+            </div>
+            <div class="command-line">
+                <center>$ Initializing system components...</center>
+            </div>
+            <div class="command-line">
+                <center>$ Loading 8-bit retro environment...</center>
+                <span class="blinking-underscore"><br/><br/>... .. -- .... .- <br/><br/> Press Enter key to continue...</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to handle keydown event
+        function handleKeyDown(event) {
+            // Check if the pressed key is Enter (key code 13)
+            if (event.keyCode === 13) {
+                // Redirect to main.html
+                window.location.href = "main.html";
+            }
+
+        }
+
+        // Add event listener for keydown on the document
+        document.addEventListener('keydown', handleKeyDown);
+        document.addEventListener('DOMContentLoaded', function() {
+            // Event listener for touchstart on the loading page
+            document.querySelector('.loading-page').addEventListener('touchstart', function() {
+                // Redirect to main.html
+                window.location.href = "main.html";
+            });
+        });
+        
+    </script>
+
+</body>
+</html>
