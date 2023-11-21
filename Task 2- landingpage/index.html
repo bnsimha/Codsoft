@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipher Cycles</title>
+    <link href="https://db.onlinewebfonts.com/c/6ab539c6fc2b21ff0b149b3d06d7f97c?family=Minecraft+Regular" rel="stylesheet">
+
+    <style>
+        @import url('https://db.onlinewebfonts.com/c/6ab539c6fc2b21ff0b149b3d06d7f97c?family=Minecraft+Regular');
+
+        body {
+            font-family: "Minecraft Regular";
+            margin: 0;
+            padding: 0;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: #333;
+            color: whitesmoke;
+            text-align: center;
+            padding: 1em 0;
+            position: relative;
+        }
+
+        .logo-left, .logo-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .logo-left {
+            left: 400px;
+        }
+
+        .logo-right {
+            right: 400px;
+        }
+
+        nav {
+            float: right;
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 1em;
+            text-align: center;
+            background-color: #ddd;
+            margin: 0.5em;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            background-color: #aaa;
+            transform: scale(1.3); /* Zoom in on hover */
+
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 2em;
+        }
+
+        .product {
+            width: 30%;
+            margin: 1em;
+            padding: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #fff;
+            cursor: grab;
+            transition: transform 0.3s ease;
+        }
+
+        .product:active {
+            cursor: grabbing;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .contact-button {
+            color: #fff;
+            text-decoration: none;
+            padding: 1em;
+            text-align: center;
+            background-color: grey;
+            margin: 0.5em;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            background-color: gainsboro;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        header {
+            opacity: 0; /* Start with opacity 0 for fade-in effect */
+            transition: opacity 1s ease-in-out; /* Animation duration and easing */
+        }
+
+        section {
+            opacity: 0;
+            transform: translateY(20px); /* Start with a slight translateY for slide-up effect */
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+
+        /* Additional styles for the animation classes */
+        .fade-in {
+            opacity: 1 !important; /* Override opacity to make it fully visible */
+        }
+
+        .slide-up {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-left">
+        <img src="logo.jpg" alt="Left Logo" width="100">
+    </div>
+
+    <h1>Cipher Cycles</h1>
+
+    <div class="logo-right">
+        <img src="logo.jpg" alt="Right Logo" width="100">
+    </div>
+</header>
+
+<nav>
+    <a onclick="openModal()">About Us</a>
+    <a href="#products">Products</a>
+    <a href="#accessories">Accessories</a>
+    <a href="#upgrade">Upgrade</a>
+    <a href="#rent">Rent</a>
+    <a href="#franchise">Franchise</a>
+</nav>
+
+<section id="products">
+    <div class="product" draggable="true">
+        <h2>Dynamo</h2>
+        <img src="1.jpg" alt="Dynamo Image" width="80%">
+    </div>
+
+    <div class="product" draggable="true">
+        <h2>Indie</h2>
+        <img src="2.jpg" alt="Indie Image" width="80%">
+    </div>
+
+    <div class="product" draggable="true">
+        <h2>BackTrack</h2>
+        <img src="3.jpg" alt="BackTrack Image" width="80%">
+    </div>
+
+    <div class="product" draggable="true">
+        <h2>NQueen</h2>
+        <img src="4.jpg" alt="NQueen Image" width="80%">
+    </div>
+</section>
+
+<div id="aboutUsModal" class="modal">
+    <div class="modal-content">
+        <span onclick="closeModal()" style="float:right; cursor:pointer;">&times;</span>
+        <h2>About Us</h2>
+        <p>
+            Cipher Cycle: Elevate your ride with cutting-edge bicycles – <b><i>Dynamo, Indie, BackTrack, and NQueen.</i></b>
+            <br /><br /> Explore top-notch accessories, personalized upgrades, and convenient rentals.
+            <br /><br />Join our franchise for a rewarding venture. Discover the joy of cycling with Cipher – where innovation meets the road.
+            <br /><br />🚴‍♂️✨ #CipherCycle #RideInStyle
+        </p>
+    </div>
+</div>
+
+<footer>
+    <a href="mailto:bnsimha7@gmail.com" class="contact-button">Contact Developer - Bhargava Simha</a>
+</footer>
+
+<script>
+    function openModal() {
+        document.getElementById('aboutUsModal').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.getElementById('aboutUsModal').style.display = 'none';
+    }
+
+    let dragged;
+
+    document.addEventListener("dragstart", function (event) {
+        dragged = event.target;
+        event.target.style.opacity = 0.5;
+    });
+
+    document.addEventListener("dragend", function (event) {
+        event.target.style.opacity = "";
+    });
+
+    document.addEventListener("dragover", function (event) {
+        event.preventDefault();
+    });
+
+    document.addEventListener("drop", function (event) {
+        event.preventDefault();
+        if (event.target.classList.contains("product")) {
+            const rect = event.target.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            dragged.style.position = "absolute";
+            dragged.style.left = x + "px";
+            dragged.style.top = y + "px";
+        }
+    });
+    window.addEventListener("scroll", function () {
+        // Get the header and products section
+        const header = document.querySelector("header");
+        const productsSection = document.getElementById("products");
+
+        // Check if the top of the products section is visible on the screen
+        const isVisible = productsSection.getBoundingClientRect().top < window.innerHeight;
+
+        // Add animation classes if the products section is visible
+        if (isVisible) {
+            header.classList.add("fade-in");
+            productsSection.classList.add("slide-up");
+        }
+    });
+</script>
+</body>
+</html>
